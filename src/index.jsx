@@ -8,6 +8,9 @@ import { createStore, combineReducers } from 'redux';
 import App from './components/app';
 import '../assets/stylesheets/application.scss';
 
+import messagesReducer from './reducers/messages_reducer';
+import selectedChannelReducer from './reducers/selected_channel_reducer';
+
 const initialState = {
   messages: [],
   channels: ['general', 'cool react stuff', 'berlin my love'],
@@ -16,8 +19,13 @@ const initialState = {
 };
 
 // State and reducers
+const identityReducer = (state = null) => state;
+
 const reducers = combineReducers({
-  changeMe: (state = null, action) => state
+  messages: messagesReducer,
+  selectedChannel: selectedChannelReducer,
+  channels: identityReducer,
+  currentUser: identityReducer
 });
 
 // render an instance of the component in the DOM
