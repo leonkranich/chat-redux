@@ -26,8 +26,8 @@ const initialState = {
     "content":"My name is anonymous77",
     "created_at":"2017-09-26T23:03:21.194Z"
   }],
-  channels: ['general', 'react', 'paris'],
-  currentUser: prompt("What is your username?"),
+  channels: ['general', 'cool react stuff', 'berlin my love'],
+  currentUser: prompt("Hey awesome what's your name?"),
   selectedChannel: 'general'
 };
 
